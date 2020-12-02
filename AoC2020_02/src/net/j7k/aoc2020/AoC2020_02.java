@@ -23,9 +23,6 @@ public class AoC2020_02 {
 			String pwd = m.group(4);
 			long nbOccurences = pwd.chars().filter( x -> x == c).count();
 			
-			//System.out.println(input);
-			//System.out.println(min + "|" + max + "|" + c + "|" + nbOccurences);
-			
 			result = ( (min <= nbOccurences) && (nbOccurences <= max) );
 		}
 		else 
