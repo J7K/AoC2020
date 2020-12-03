@@ -28,7 +28,7 @@ public class AoC2020_03 {
 	}
 		
 	
-	static int treeInPath(boolean[][] map, int xStep, int yStep)
+	static long treeInPath(boolean[][] map, int xStep, int yStep)
 	{
 		int result = 0;
 		int x = 0;
@@ -53,11 +53,11 @@ public class AoC2020_03 {
 			
 			System.out.println("Trees in path: " + treeInPath(map, 3, 1));
 			
-			long stack = treeInPath(map, 1, 1) 
+			long partTwoValue = treeInPath(map, 1, 1) 
 					* treeInPath(map, 3, 1) 
 					* treeInPath(map, 5, 1) 
-					* treeInPath(map, 7, 1);	
-			BigInteger partTwoValue = BigInteger.valueOf(stack).multiply(BigInteger.valueOf(treeInPath(map, 1, 2)));
+					* treeInPath(map, 7, 1)
+					* treeInPath(map, 1, 2);	
 			System.out.println("Trees in 5 paths: " + partTwoValue);
 		}
 
