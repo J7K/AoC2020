@@ -14,7 +14,7 @@ public class AoC2020_05 {
 	                .boxed()
 	                .map(row -> IntStream.range(0, 8)
 	                        .boxed()
-	                        .map(col -> 8*row+col)
+	                        .map(seat -> BoardingPass.computeSeatID(row, seat))
 	                        .collect(Collectors.toList()))
 	                .flatMap(List::stream)
 	                .sorted()

@@ -3,12 +3,17 @@ package net.j7k.aoc2020;
 public class BoardingPass {
 	
 	int row;
-	int col;
+	int seat;
 	int id;
 	
 	public int getID()
 	{
 		return id;
+	}
+	
+	static public int computeSeatID(int row, int seat)
+	{
+		return row * 8 + seat;
 	}
 	
 	private int decodeRow(String input)
@@ -37,7 +42,7 @@ public class BoardingPass {
 			throw new IllegalArgumentException(input);
 
 		row = decodeRow(input.substring(0, 7));
-		col = decodeCol(input.substring(7,10));
-		id = row * 8 + col;
+		seat = decodeCol(input.substring(7,10));
+		id = computeSeatID(row, seat);
 	}
 }
