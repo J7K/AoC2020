@@ -17,7 +17,6 @@ public class AoC2020_05 {
 	                        .map(seat -> BoardingPass.computeSeatID(row, seat))
 	                        .collect(Collectors.toList()))
 	                .flatMap(List::stream)
-	                .sorted()
 	                .collect(Collectors.toList());
 	 }
 	 
