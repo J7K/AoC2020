@@ -3,6 +3,7 @@ package net.j7k.aoc2020;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 public class AoC2020_04 {
 	
@@ -13,7 +14,6 @@ public class AoC2020_04 {
 	static final String HCL_RULE = "#([0-9a-f]){6}";
 	static final String ECL_RULE = "(amb|blu|brn|gry|grn|hzl|oth)";
 	static final String PID_RULE = "[0-9]{9}";
-
 
 
 	static boolean isValidPassport(String input)

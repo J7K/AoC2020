@@ -50,7 +50,6 @@ public class AoC2020_06 {
 					.map(AoC2020_06::isecOfUniqueAnswers)
 					.mapToInt(i -> i.size())
 					.sum();
-
 			System.out.println("Sum of group answers: " + ansSum2);
 		}
 

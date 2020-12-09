@@ -1,5 +1,6 @@
 package net.j7k.aoc2020;
 
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Iterator;
@@ -50,7 +51,7 @@ public class AoC2020_07 {
 		}		
 		return result;
 	}
-	
+		
 	public static void main(String[] args) {
 		try
 		{
@@ -65,8 +66,7 @@ public class AoC2020_07 {
 	           ancestorCount++;
 	        }	
 	        System.out.println("Nb ancestors: " + ancestorCount);
-	        
-	        System.out.println("Nb bags: " + countBags("shiny gold"));
+	        System.out.println("Nb bags: " + countBags("shiny gold"));	        
 		}
 		catch (Exception e)
 		{

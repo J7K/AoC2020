@@ -1,6 +1,5 @@
 package net.j7k.aoc2020;
 
-import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
