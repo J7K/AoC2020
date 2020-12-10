@@ -9,18 +9,14 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class AoC2020_10 {
-
-	static List<Integer> adapters;
 	
 	static long dp(int index, List<Integer> adapters, Map<Integer, Long> cache)
 	{
 		if (!cache.containsKey(index))
 		{
 			if (index == 0)
-			{
 				cache.put(index, 1L);
-			}
-
+			
 			else
 			{
 				int ancestorIdx = index - 1;
@@ -47,7 +43,7 @@ public class AoC2020_10 {
 		try
 		{
 			Path datafile= Path.of(args[0]);
-			adapters = Files.lines(datafile).map(Integer::parseInt).collect(Collectors.toList());
+			List<Integer> adapters = Files.lines(datafile).map(Integer::parseInt).collect(Collectors.toList());
 			
 			int max = adapters.stream().max(Integer::compare).get();
 			adapters.add(0, 0);
